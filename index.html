@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+  <link href="index.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8">
+	<title>한달머니 응모</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+      <h3>한달머니</h3>
+      <h2><center> 6월누적머니 </center></h2>
+
+<table border="1">
+      <tr><td id="test"></td></tr>
+</table>
+
+<style>
+      table {
+        width:70%;height:200px;margin-left:15%; margin-right:15%;text-align : center;
+        ;font-size:40px;
+      }
+</style>
+
+<nav>
+  <ul id="Menu_Center">
+      <li><a href="#">메일</a></li>
+      <li><a href="#">카페</a></li>
+      <li><a href="#">블로그</a></li>
+      <li><a href="#">블로그</a></li>
+      <li><a href="#">일일응모현황</a></li>
+  </ul>
+</nav>
+
+<center>
+    <div>
+      <form>
+        <input type="button" value='응모하기' onclick='test()'style="width:180px;height:70px;font-size:22px;">
+      </form>
+    </div>
+</center>
+
+<script type="text/javascript">
+      function test() {
+      var td = document.getElementById("test");
+      var n = Number(td.innerHTML);
+      td.innerHTML = n + 1;
+      }
+</script>
+
+<style>
+
+      ul{width:96%;height:33px;background:Black;list-style:none;padding-top:9px;}
+      ul li{text-align : center;}
+      ul li a{font-size:13px;color:White;font-weight:bold;text-decoration:none}
+      ul li{float:left;margin-right:40px;font-family:dotum;}
+
+</style>
+
+
+
+</body>
+
+</html>
