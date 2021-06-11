@@ -10,23 +10,25 @@
 
 </head>
 
-
 <body>
 
-      <h3 align=left>한달머니</h3>
-      <h2><center> 6월누적머니 </center></h2>
+      <h3 align=left>한달</h3>
+      <h2 style="position: absolute; top: 50px; left: 1130px;"
+      align="center">6월누적머니</h2>
 
 <table border="1">
-      <tr><td id="test"></td></tr>
+            <tr><td id="test"></td></tr>
 </table>
 
 <style>
-      table {
-        width:70%;height:200px;margin-left:15%; margin-right:15%;text-align : center;
-        ;font-size:48px;
-      }
+       table {
+        margin-left: auto; margin-right: auto; border:1px solid black; border-collapse:collapse;
+        width:1100px; height:250px; text-align : center; font-size:48px;
+         position: absolute; top: 115px; left: 650px;
+        }
 </style>
-
+</br></br></br></br></br></br></br></br></br></br></br>
+</br></br></br>
 <nav>
   <ul id="Menu_Center">
       <li><a href="#">희주</a></li>
@@ -38,21 +40,26 @@
 </nav>
 
 <style id="Menu_Center">
-      ul{width:98%;height:33px;background:Black;list-style:none;padding-top:9px;}
+      ul{width:98%;height:35px;background:Black;list-style:none;padding-top:15px}
       ul li{text-align : center;}
       ul li a{font-size:13px;color:White;font-weight:bold;text-decoration:none}
       ul li{float:left;margin-right:100px;font-family:dotum;}
+
 </style>
 
+     <div class="Login box" style="background-color:#f2f2f2;
+     width: 300px; height:150px; float: right; position: absolute;
+top: 450px; left: 1600px;">
+       <input type='button' class='btn' name='btn' value='구글 로그인'
+       onclick="location.href='주소를 입력@@@@@@@@@@@@@@@@@@@'"
+       style='background-color: #ffffff;
+       width:250px; height:60px; transform: translate(10%, 55%);'
+       />
 
-    <div class="Login box" style="background-color:#f2f2f2; float:right;margin-right: 20%;
-    height: 110px; width: 250px;">
-        <input type='button' class='btn' name='btn' value='구글 로그인'
-        onclick="location.href='주소를 입력@@@@@@@@@@@@@@@@@@@'"
-        style='background-color: #4CAF50; border: 0; outline: 0;
-        width:229px; height:44px; transform: translate(5%, 55%);'
-
-        />
+     </div>
+     <div style="width: 1050px; height:150px; border:1px solid Black;
+      position: absolute; top: 450px; left: 500px; ">
+       <p> 배너광고</p>
      </div>
 
 
@@ -70,14 +77,17 @@
 </center>
 
 <script type="text/javascript">
-      function test() {
-      var td = document.getElementById("test");
-      var n = Number(td.innerHTML);
-      td.innerHTML = n + 1;
-      }
-
+    var num = localStorage.getItem("num");
+    if(num) {
+        document.getElementById("test").innerHTML = num;
+    }
+    function test() {
+        var td = document.getElementById("test");
+        var n = Number(td.innerHTML) + 1;
+        td.innerHTML = n;
+        localStorage.setItem("num", n);
+    }
 </script>
-
 
 
 </body>
